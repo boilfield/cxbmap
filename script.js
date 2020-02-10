@@ -17,7 +17,7 @@ attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreet
 }).addTo(map);
 
 // Edit to upload GeoJSON data file from your local directory
-$.getJSON("cx.geojson", function (data) {
+$.getJSON("cox.geojson", function (data) {
   geoJsonLayer = L.geoJson(data, {
     style: style,
     onEachFeature: onEachFeature
