@@ -12,7 +12,7 @@ map.attributionControl
 map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census</a>');
 
 // Basemap layer
-new L.tileLayer('https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}', {
+new L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 }).addTo(map);
 
@@ -41,7 +41,7 @@ function getColor(d) {
 function style(feature) {
   return {
     fillColor: getColor(feature.properties.name),
-    weight: 1,
+    weight: 4,
     opacity: 1,
     color: 'red',
     fillOpacity: 0.7
@@ -86,8 +86,8 @@ info.onAdd = function (map) {
 // Edit info box text and variables (such as props.density2010) to match those in your GeoJSON data
 info.update = function (props) {
   this._div.innerHTML = '<h4>Coxs Bazar Wash</h4>' +  (props ?
-    '<b>' + props.town + '</b><br />' + props.density2010 + ' people / mi<sup>2</sup>'
-    : 'Hover over a town');
+    '<b>' + props.town + '</b><br />' + props.density2010 + '</sup>'
+    : 'Hover over a area');
 };
 info.addTo(map);
 
